@@ -1,11 +1,11 @@
-# 🥋 Aikido Punch Intensity Tracker (Member 2: Data Collection & Preprocessing)
+# 🥋 Punch Intensity Tracker
 
-Dự án này tập trung vào việc thu thập và xử lý dữ liệu đa cảm biến (IMU + PPG) để nhận diện cường độ đòn đánh trong Aikido. Hệ thống sử dụng ESP32 S3 để ghi nhận dữ liệu thời gian thực với tần số 100Hz.
+Dự án thu thập và xử lý dữ liệu đa cảm biến (IMU + PPG) phục vụ nhận diện cường độ đòn đánh Aikido. Hệ thống chạy trên ESP32 S3 với tần số 100Hz.
 
 ## 🛠 Hardware Configuration
 - **MCU:** ESP32 S3 (Lolin S3 Mini).
-- **IMU:** MPU6050 - Cấu hình dải đo **±16g** để tránh hiện tượng Clipping khi đấm mạnh.
-- **PPG:** MAX30102 - Điều chỉnh LED Brightness để duy trì IR Value trong dải **100k - 200k**, ngăn chặn bão hòa tín hiệu (Saturation).
+- **IMU:** MPU6050 - Cấu hình dải đo **±16g**.
+- **PPG:** MAX30102 - IR ổn định ở mức **100k - 200k**.
 
 ## 📂 Project Structure
 Dự án được tổ chức theo cấu trúc chuẩn để dễ dàng bàn giao và mở rộng:
@@ -23,7 +23,7 @@ Aikido_Project/
 │   └── 6th_master_processing.ipynb # Gộp file và trích xuất đặc trưng (Feature Engineering)
 ├── docs/
 │   └── visual_qc/       # Kho lưu trữ ảnh Plot của các hiệp thu chuẩn (Clean)
-└── README.md```
+└── README.md
 
 ## Data Dictionary (For master_dataset.csv)
 Column,Unit,Description
