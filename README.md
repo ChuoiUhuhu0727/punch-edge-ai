@@ -16,6 +16,7 @@ Aikido_Project/
 │   └── processed/       # File master_dataset_aikido.csv sau khi đã gộp và xử lý
 ├── firmware/
 │   └── main.cpp         # Code C++ nạp cho ESP32
+    └── classifier.h     # Code C để tính Heart Rate Recovery
 ├── scripts/
 │   └── collect_data.py  # Script Python thu thập dữ liệu qua Serial (Relative Path ready)
 ├── notebooks/
