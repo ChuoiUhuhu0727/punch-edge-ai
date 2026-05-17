@@ -1,23 +1,34 @@
 #ifndef CLASSIFIER_H
 #define CLASSIFIER_H
 
-/* Logic nhận diện cường độ đòn đánh Aikido (Version 60-samples)
- * Chuyển đổi từ Decision Tree (Colab) sang C++
- */
 int classifySignal(float peak_max, float acc_std, float peak_relative) {
-    if (acc_std <= 2048.57) {
-        if (acc_std <= 1843.78) {
-            return 0; // Normal
+    if (acc_std <= 2488.65) {
+        if (acc_std <= 1827.03) {
+            if (peak_relative <= 2.13) {
+                return 0; // Class 0
+            } else {
+                return 0; // Class 0
+            }
         } else {
-            if (peak_relative <= 2.10) return 1; // Intense
-            else return 0; // Normal
+            if (peak_relative <= 2.11) {
+                return 1; // Class 1
+            } else {
+                return 0; // Class 0
+            }
         }
     } else {
-        if (peak_max <= 23797.71) {
-            if (peak_max <= 15882.40) return 1; // Intense
-            else return 0; // Normal
+        if (acc_std <= 3785.27) {
+            if (peak_max <= 17406.41) {
+                return 1; // Class 1
+            } else {
+                return 0; // Class 0
+            }
         } else {
-            return 1; // Intense
+            if (acc_std <= 3986.92) {
+                return 1; // Class 1
+            } else {
+                return 1; // Class 1
+            }
         }
     }
 }
