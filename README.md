@@ -2,10 +2,13 @@
 
 🇻🇳 [Đọc bằng tiếng Việt](README.vi.md)
 
-Wrist-worn device that classifies Aikido punch intensity and tracks heart rate recovery — **the Decision Tree runs fully on-chip** (ESP32-S3), no phone or cloud required. WiFi is used only at the end to email the session report.
+A wrist device for Aikido training that classifies each punch as Normal or Intense and tracks heart rate recovery. **The AI model runs directly on the ESP32-S3 chip** — no phone or cloud needed. WiFi is only used at the end to send the session report by email.
 
 **Course:** ENG209 Signals, Systems and Control — Fulbright University Vietnam  
-**Team:** [Hoàng Nguyễn Ngọc Giang](https://www.linkedin.com/in/giang-ho%C3%A0ng/) · [Phan Ngọc Quốc Duy](https://www.linkedin.com/in/duy-phan-ngọc-quốc-3a342a312) · [Trần Thanh Tùng](https://www.linkedin.com/in/t%C3%B9ng-tr%E1%BA%A7n/)
+**Team:**  
+[Hoàng Nguyễn Ngọc Giang](https://www.linkedin.com/in/giang-ho%C3%A0ng/) — Signal Processing & AI  
+[Phan Ngọc Quốc Duy](https://www.linkedin.com/in/duy-phan-ngọc-quốc-3a342a312) — Hardware  
+[Trần Thanh Tùng](https://www.linkedin.com/in/t%C3%B9ng-tr%E1%BA%A7n/) — Hardware
 
 ---
 
@@ -18,19 +21,21 @@ Wrist-worn device that classifies Aikido punch intensity and tracks heart rate r
 | 60 s rest after punching stops | Peak BPM − Rest BPM | Heart Rate Recovery (HRR) score |
 
 ![Raw Input Data](docs/images/raw%20input%20data.png)
+*Raw sensor signals: Acc\_Mag from MPU6050 (acceleration magnitude) and IR PPG from MAX30102 (heart rate optical signal)*
 
 ---
 
 ## System Pipeline
 
 ![System Pipeline](docs/images/System%20Pipeline.png)
+*End-to-end system pipeline: from sensor input to session report email*
 
 ---
 
 ## Signal Processing & AI
 
-<!-- Drop your DSP + Decision Tree illustration here -->
 ![DSP and AI Pipeline](docs/images/dsp_ai.png)
+*DSP and AI pipeline: PPG heart rate processing (left) and IMU punch classifier with Decision Tree (right)*
 
 **Key parameters:**
 - Activity gate: `acc_std < 1500 LSB` → window skipped
@@ -49,8 +54,10 @@ Wrist-worn device that classifies Aikido punch intensity and tracks heart rate r
 | MAX30102 | PPG — optical heart rate | IR 940 nm, I2C 0x57 |
 
 ![Hardware](docs/images/Hardware.png)
+*Wiring diagram: ESP32-S3 connected to MPU6050 and MAX30102 on shared I2C bus*
 
 ![Prototype](docs/images/Prototype.png)
+*Prototype worn on wrist during testing*
 
 Wiring: SDA = GPIO 5, SCL = GPIO 6, 400 kHz, 3.3 V.
 

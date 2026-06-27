@@ -2,10 +2,13 @@
 
 🇬🇧 [Read in English](README.md)
 
-Thiết bị đeo cổ tay phân loại cường độ đòn đấm Aikido và theo dõi khả năng hồi phục tim — **Decision Tree chạy hoàn toàn trên chip** (ESP32-S3), không cần điện thoại hay cloud. WiFi chỉ dùng ở bước cuối để gửi báo cáo qua Gmail.
+Thiết bị đeo cổ tay cho việc tập Aikido — phân loại từng đòn đấm là Thường hay Mạnh và theo dõi hồi phục nhịp tim. **Mô hình AI chạy trực tiếp trên chip ESP32-S3** — không cần điện thoại hay cloud. WiFi chỉ dùng ở bước cuối để gửi báo cáo qua email.
 
 **Môn học:** ENG209 Tín hiệu, Hệ thống và Điều khiển — Đại học Fulbright Việt Nam  
-**Nhóm:** [Hoàng Nguyễn Ngọc Giang](https://www.linkedin.com/in/giang-ho%C3%A0ng/) · [Phan Ngọc Quốc Duy](https://www.linkedin.com/in/duy-phan-ngọc-quốc-3a342a312) · [Trần Thanh Tùng](https://www.linkedin.com/in/t%C3%B9ng-tr%E1%BA%A7n/)
+**Nhóm:**  
+[Hoàng Nguyễn Ngọc Giang](https://www.linkedin.com/in/giang-ho%C3%A0ng/) — Xử lý tín hiệu & AI  
+[Phan Ngọc Quốc Duy](https://www.linkedin.com/in/duy-phan-ngọc-quốc-3a342a312) — Phần cứng  
+[Trần Thanh Tùng](https://www.linkedin.com/in/t%C3%B9ng-tr%E1%BA%A7n/) — Phần cứng
 
 ---
 
@@ -18,19 +21,21 @@ Thiết bị đeo cổ tay phân loại cường độ đòn đấm Aikido và t
 | 60 giây nghỉ sau khi ngừng đấm | BPM đỉnh − BPM lúc nghỉ | Chỉ số hồi phục tim (HRR) |
 
 ![Dữ liệu đầu vào thô](docs/images/raw%20input%20data.png)
+*Tín hiệu thô từ cảm biến: Acc\_Mag từ MPU6050 (độ lớn gia tốc) và IR PPG từ MAX30102 (tín hiệu nhịp tim quang học)*
 
 ---
 
 ## Pipeline hệ thống
 
 ![Pipeline hệ thống](docs/images/System%20Pipeline.png)
+*Pipeline hệ thống từ đầu đến cuối: từ tín hiệu cảm biến đến email báo cáo*
 
 ---
 
 ## Xử lý tín hiệu & AI
 
-<!-- Thêm hình minh hoạ DSP + Decision Tree vào đây -->
 ![DSP và AI Pipeline](docs/images/dsp_ai.png)
+*Pipeline DSP và AI: xử lý nhịp tim PPG (trái) và phân loại đòn đấm IMU bằng Decision Tree (phải)*
 
 **Tham số chính:**
 - Activity gate: `acc_std < 1500 LSB` → bỏ qua cửa sổ
@@ -49,8 +54,10 @@ Thiết bị đeo cổ tay phân loại cường độ đòn đấm Aikido và t
 | MAX30102 | PPG — đo nhịp tim quang học | IR 940 nm, I2C 0x57 |
 
 ![Phần cứng](docs/images/Hardware.png)
+*Sơ đồ đấu dây: ESP32-S3 kết nối MPU6050 và MAX30102 qua bus I2C chung*
 
 ![Nguyên mẫu thực tế](docs/images/Prototype.png)
+*Nguyên mẫu đeo trên cổ tay khi thử nghiệm*
 
 Kết nối: SDA = GPIO 5, SCL = GPIO 6, 400 kHz, nguồn 3.3 V.
 
