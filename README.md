@@ -55,7 +55,7 @@ A wrist device for martial-art training that classifies each punch as Normal or 
 | MAX30102 | PPG — optical heart rate | IR 940 nm, I2C 0x57 |
 
 ![Hardware](docs/images/Hardware.png)
-*Wiring diagram: ESP32-S3 connected to MPU6050 and MAX30102 on shared I2C bus*
+*3D Simulation*
 
 ![Prototype](docs/images/Prototype.png)
 *Prototype worn on wrist during testing*
