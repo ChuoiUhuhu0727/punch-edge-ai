@@ -2,7 +2,7 @@
 
 🇻🇳 [Đọc bằng tiếng Việt](README.vi.md)
 
-A wrist device for Aikido training that classifies each punch as Normal or Intense and tracks heart rate recovery. **The AI model runs directly on the ESP32-S3 chip** — no phone or cloud needed. WiFi is only used at the end to send the session report by email.
+A wrist device for Aikido training that classifies each punch as Normal or Intense and tracks heart rate recovery. **The AI model runs directly on the ESP32-S3 chip** - no phone or cloud needed. WiFi is only used at the end to send the session report by email.
 
 **Course:** ENG209 Signals, Systems and Control — Fulbright University Vietnam  
 **Team:**  
@@ -28,6 +28,7 @@ A wrist device for Aikido training that classifies each punch as Normal or Inten
 ## System Pipeline
 
 ![System Pipeline](docs/images/System%20Pipeline.png)
+
 *End-to-end system pipeline: from sensor input to session report email*
 
 ---
