@@ -36,6 +36,7 @@ A wrist device for martial-art training that classifies each punch as Normal or 
 ## Signal Processing & AI
 
 ![DSP and AI Pipeline](docs/images/dsp_ai.png)
+
 *DSP and AI pipeline: PPG heart rate processing (left) and IMU punch classifier with Decision Tree (right)*
 
 **Key parameters:**
@@ -55,10 +56,13 @@ A wrist device for martial-art training that classifies each punch as Normal or 
 | MAX30102 | PPG — optical heart rate | IR 940 nm, I2C 0x57 |
 
 ![Hardware](docs/images/Hardware.png)
+
 *3D Simulation*
 
 ![Prototype](docs/images/Prototype.png)
+
 *Prototype worn on wrist during testing*
+
 
 Wiring: SDA = GPIO 5, SCL = GPIO 6, 400 kHz, 3.3 V.
 
