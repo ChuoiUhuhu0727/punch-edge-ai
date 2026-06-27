@@ -5,7 +5,7 @@
 Wrist-worn device that classifies Aikido punch intensity and tracks heart rate recovery — **the Decision Tree runs fully on-chip** (ESP32-S3), no phone or cloud required. WiFi is used only at the end to email the session report.
 
 **Course:** ENG209 Signals, Systems and Control — Fulbright University Vietnam  
-**Team:** Hoàng Nguyễn Ngọc Giang · Phan Ngọc Quốc Duy · Trần Thanh Tùng
+**Team:** [Hoàng Nguyễn Ngọc Giang](https://www.linkedin.com/in/giang-ho%C3%A0ng/) · [Phan Ngọc Quốc Duy](https://www.linkedin.com/in/duy-phan-ngọc-quốc-3a342a312) · [Trần Thanh Tùng](https://www.linkedin.com/in/t%C3%B9ng-tr%E1%BA%A7n/)
 
 ---
 
@@ -17,12 +17,13 @@ Wrist-worn device that classifies Aikido punch intensity and tracks heart rate r
 | MAX30102 — infrared PPG @ 100 Hz | Moving avg → IIR detrend → peak detection | Real-time BPM |
 | 60 s rest after punching stops | Peak BPM − Rest BPM | Heart Rate Recovery (HRR) score |
 
+![Raw Input Data](docs/images/raw%20input%20data.png)
+
 ---
 
 ## System Pipeline
 
-<!-- Drop your pipeline diagram here -->
-![System Pipeline](docs/images/pipeline.png)
+![System Pipeline](docs/images/System%20Pipeline.png)
 
 ---
 
@@ -47,8 +48,9 @@ Wrist-worn device that classifies Aikido punch intensity and tracks heart rate r
 | MPU6050 | IMU — acceleration | ±16g, I2C 0x68 |
 | MAX30102 | PPG — optical heart rate | IR 940 nm, I2C 0x57 |
 
-<!-- Drop your wiring diagram / hardware photo here -->
-![Hardware](docs/images/hardware.png)
+![Hardware](docs/images/Hardware.png)
+
+![Prototype](docs/images/Prototype.png)
 
 Wiring: SDA = GPIO 5, SCL = GPIO 6, 400 kHz, 3.3 V.
 

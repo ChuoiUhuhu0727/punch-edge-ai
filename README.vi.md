@@ -5,7 +5,7 @@
 Thiết bị đeo cổ tay phân loại cường độ đòn đấm Aikido và theo dõi khả năng hồi phục tim — **Decision Tree chạy hoàn toàn trên chip** (ESP32-S3), không cần điện thoại hay cloud. WiFi chỉ dùng ở bước cuối để gửi báo cáo qua Gmail.
 
 **Môn học:** ENG209 Tín hiệu, Hệ thống và Điều khiển — Đại học Fulbright Việt Nam  
-**Nhóm:** Hoàng Nguyễn Ngọc Giang · Phan Ngọc Quốc Duy · Trần Thanh Tùng
+**Nhóm:** [Hoàng Nguyễn Ngọc Giang](https://www.linkedin.com/in/giang-ho%C3%A0ng/) · [Phan Ngọc Quốc Duy](https://www.linkedin.com/in/duy-phan-ngọc-quốc-3a342a312) · [Trần Thanh Tùng](https://www.linkedin.com/in/t%C3%B9ng-tr%E1%BA%A7n/)
 
 ---
 
@@ -17,12 +17,13 @@ Thiết bị đeo cổ tay phân loại cường độ đòn đấm Aikido và t
 | MAX30102 — PPG hồng ngoại @ 100 Hz | Moving avg → IIR detrend → phát hiện đỉnh | Nhịp tim BPM theo thời gian thực |
 | 60 giây nghỉ sau khi ngừng đấm | BPM đỉnh − BPM lúc nghỉ | Chỉ số hồi phục tim (HRR) |
 
+![Dữ liệu đầu vào thô](docs/images/raw%20input%20data.png)
+
 ---
 
 ## Pipeline hệ thống
 
-<!-- Thêm hình sơ đồ pipeline vào đây -->
-![Pipeline hệ thống](docs/images/pipeline.png)
+![Pipeline hệ thống](docs/images/System%20Pipeline.png)
 
 ---
 
@@ -47,8 +48,9 @@ Thiết bị đeo cổ tay phân loại cường độ đòn đấm Aikido và t
 | MPU6050 | IMU — đo gia tốc | ±16g, I2C 0x68 |
 | MAX30102 | PPG — đo nhịp tim quang học | IR 940 nm, I2C 0x57 |
 
-<!-- Thêm hình sơ đồ mạch / ảnh phần cứng vào đây -->
-![Phần cứng](docs/images/hardware.png)
+![Phần cứng](docs/images/Hardware.png)
+
+![Nguyên mẫu thực tế](docs/images/Prototype.png)
 
 Kết nối: SDA = GPIO 5, SCL = GPIO 6, 400 kHz, nguồn 3.3 V.
 
