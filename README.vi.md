@@ -115,3 +115,11 @@ pio device monitor   # 115200 baud
     ├── images/           # Hình ảnh minh hoạ cho README
     └── visual_qc/        # Đồ thị QC từng hiệp thu thập
 ```
+
+---
+
+## Phát triển tiếp theo
+
+Dự án được tiếp tục với kiến trúc **FreeRTOS + BLE**, mở rộng từ phân loại đòn đấm sang nhận dạng 5 hoạt động thể chất (Đi bộ / Chạy / Ngồi / Đứng / Nằm).
+
+→ [wearable-health-monitor](https://github.com/ChuoiUhuhu0727/wearable-health-monitor)

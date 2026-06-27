@@ -115,3 +115,11 @@ pio device monitor   # 115200 baud
     ├── images/           # Diagrams and photos for this README
     └── visual_qc/        # QC plots per collection session
 ```
+
+---
+
+## What came next
+
+This project was continued and redesigned with **FreeRTOS + BLE**, expanding from punch classification to 5 human activity classes (Walk / Run / Sit / Stand / Lying Down).
+
+→ [wearable-health-monitor](https://github.com/ChuoiUhuhu0727/wearable-health-monitor)
