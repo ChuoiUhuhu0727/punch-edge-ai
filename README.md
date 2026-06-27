@@ -6,9 +6,9 @@ A wrist device for martial-art training that classifies each punch as Normal or 
 
 **Course:** ENG209 Signals, Systems and Control — Fulbright University Vietnam  
 **Team:**  
-[Hoàng Nguyễn Ngọc Giang](https://www.linkedin.com/in/giang-ho%C3%A0ng/) — Signal Processing & AI  
-[Phan Ngọc Quốc Duy](https://www.linkedin.com/in/duy-phan-ngọc-quốc-3a342a312) — Hardware  
-[Trần Thanh Tùng](https://www.linkedin.com/in/t%C3%B9ng-tr%E1%BA%A7n/) — Hardware
+[Hoàng Nguyễn Ngọc Giang](https://www.linkedin.com/in/giang-ho%C3%A0ng/) - Signal Processing & AI  
+[Phan Ngọc Quốc Duy](https://www.linkedin.com/in/duy-phan-ngọc-quốc-3a342a312) - Hardware  
+[Trần Thanh Tùng](https://www.linkedin.com/in/t%C3%B9ng-tr%E1%BA%A7n/) - Hardware
 
 ---
 
